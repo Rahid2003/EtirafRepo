@@ -23,7 +23,7 @@ async def etiraf_aciq(bot: Client, query: CallbackQuery):
             await etiraf_mesaj.reply(LAN.ITIRAF_CANCEL)
             break
         else:
-            await bot.send_message(chat_id, text=LAN.ITIRAF_GONDERILDI_ADMIN_ANON.format(query.from_user.mention, query.from_user.id), reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text=LAN.ITIRAF_CHANNEL_TEXT, url=f"https://t.me/{Config.ITIRAF_CHANNEL}")]]) )
+            await bot.send_message(chat_id, text=LAN.ITIRAF_GONDERILDI_ANON.format(query.from_user.mention, query.from_user.id), reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text=LAN.ITIRAF_CHANNEL_TEXT, url=f"https://t.me/{Config.ITIRAF_CHANNEL}")]]) )
             await bot.send_message(Config.LOG_ADMINS, text=LAN.ITIRAF_GONDERILDI_ADMIN_ANON.format(query.from_user.mention, query.from_user.id))
             await bot.send_message(Config.LOG_ADMINS, text=LAN.ITIRAF_GONDERILDI_ANON_MESAJ.format(etiraf_mesaj.text), reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text=LAN.ITIRAF_GONDER, callback_data=f"onayla {query.from_user.id}"),
                                       InlineKeyboardButton(text=LAN.ITIRAF_SIL, callback_data=f"kapat {query.from_user.id}")]]))
