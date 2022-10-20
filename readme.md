@@ -3,7 +3,7 @@
 <p align="center"><a href="https://github.com/MultiAzProject/MultiEtirafBot"><img src="https://telegra.ph/file/501001e33b72db63dab0f.png" width="5000"></a></p>
 
 
-- # 2. VPS qurulum
+- # VPS qurulum
 
 1. Reponu klonla
    ```markdown
