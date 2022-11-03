@@ -1,1 +1,96 @@
+{
+    "name": "EtirafBot",
+    "description": "Hazırladı @Guliyev_di.",
+    "logo": "https://telegra.ph/file/df2e8afed59cf59713470.jpg",
+    "keywords": [
+        "Multi",
+        "Etiraf",
+        "Bot"
+    ],
+    "repository": "https://github.com/",
+    "success_url": "https://github.com/",
+    "image": "heroku/python",
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "env": {
+        "API_ID": {
+            "description": "my.telegram.org saytından ala bilərsiniz.",
+            "value": "8953338",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "my.telegram.org saytından ala bilərsiniz.",
+            "value": "fe21f223cb02d8f7c1cbda651f553a45",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "@Botfather botundan ala bilərsiniz.",
+            "value": "",
+            "required": true
+        },
+        "ITIRAF_UPDATE_CHANNEL": {
+            "description": "Yeniliklər Kanalı.",
+            "value": "AylinRobotPlaylist",
+            "required": true
+        },
+        "OWNER": {
+            "description": "Sizin idiniz",
+            "value": "",
+            "required": true
+        },
+        "LOG_ADMINS": {
+            "description": "Log qrupunuz idsi: -100 ile baslamalidir.",
+            "value": "",
+            "required": true
+        },
+        "ETIRAF_CHANNEL": {
+            "description": "Etiraf kanaliniz idsi: -100 ile baslamalidir.",
+            "value": "",
+            "required": true
+        },
+        "LOG_SILINMIS": {
+            "description": "log qrupunuz.",
+            "value": "False",
+            "required": true
+        },
+        "LOG_DATABASE": {
+            "description": "log qrupunuz.",
+            "value": "",
+            "required": true
+        },
+        "BOT_USERNAME": {
+            "description": "bot adı",
+            "value": "",
+            "required": true
+        },
+        "ITIRAF_CHANNEL": {
+            "description": "Etiraf kanallari.",
+            "value": "",
+            "required": true
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "addons": [
+        {
+            "plan": "heroku-postgresql",
+            "options": {
+                "version": "12"
+            }
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
 
