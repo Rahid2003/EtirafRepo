@@ -1,12 +1,14 @@
 class Config:
-    API_ID  = 12345678
-    API_HASH = "as5d46as5d4a6sd54as6d5a4s6d54asd65"
-    BOT_TOKEN = "12345678:asdasdasddsdasdasdas"
-    OWNER = # Sizin idiniz
-    LOG_ADMINS = #Log qrupunuz idsi: -100 ile baslamalidir
-    ETIRAF_CHANNEL = #Etiraf kanaliniz idsi: -100 ile baslamalidir
-    LOG_SILINMIS = #Log qrupunuz
-    LOG_DATABASE = #Log qrupunuz
-    BOT_USERNAME = "" #Botunuzun adi
-    ITIRAF_CHANNEL = "" #Etiraf kanallari
-    ITIRAF_UPDATE_CHANNEL = "" #Guncelleme kanaliniz
+   API_ID = int(os.getenv("API_ID"))
+   API_HASH = os.getenv("API_HASH")
+   BOT_TOKEN = os.getenv("BOT_TOKEN")
+   BOT_USERNAME = os.environ.get("BOT_USERNAME")
+   SESSION_NAME = os.environ.get("SESSION_NAME")
+   BOT_OWNER = int(os.environ.get("BOT_OWNER"))
+   OWNER = os.environ.get("OWNER") 
+   LOG_ADMINS = bool(os.environ.get("LOG_ADMINS"))
+   ETIRAF_CHANNEL = os.environ.get("ETIRAF_CHANNEL"))
+   LOG_SILINMIS = int(os.environ.get("LOG_SILINMIS"))
+   LOG_DATABASE = os.environ.get("LOG_DATABASE")
+   ITIRAF_CHANNEL = int(os.environ.get("ITIRAF_CHANNEL"))
+   ITIRAF_UPDATE_CHANNEL = int(os.environ.get("ITIRAF_UPDATE_CHANNEL"))
